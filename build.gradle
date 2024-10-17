@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral() // Repositorio para descargar dependencias
+}
+
+dependencies {
+    // Dependencia de JFreeChart
+    implementation 'org.jfree:jfreechart:1.5.3'
+
+    // Dependencias para pruebas (JUnit, etc.)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
